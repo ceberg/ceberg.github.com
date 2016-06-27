@@ -1,0 +1,52 @@
+body,section,div,ul,p,h1,h2,h3,h4,h5,h6,dd,dl {
+  padding: 0px;
+  margin: 0px;
+  font-family: "微软雅黑", "Heiti TC", "MicrosoftYaHei";
+}
+section,div,img,li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+.clear:after {
+  display: block;
+  height: 0;
+  visibility: hidden;
+  content: '';
+  clear: both;
+  zoom: 1;
+}
+/*reset完成*/
+body{
+  background: #eaeaea;
+}
+.main{
+  width:1000px;
+  margin:0 auto;
+}
+.header{
+  width:100%;
+  height:100px;
+  background: orange;
+  /*background: url(../images/img_01.jpg) repeat-y;*/
+  /*background-size:contain;*/
+  color:#fff;
+}
+.part-one{
+  background: blue;
+
+}
+.part-one h1{
+  font-size: 100px;
+}
