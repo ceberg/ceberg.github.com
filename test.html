@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>笔记</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>    
+    <meta id="viewport" name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <style>
+    .main{
+    	width:1000px;
+    	margin: 0 auto;
+    }
+    ul{
+    	width:900px;
+    	margin: 0 auto;
+    }
+    ol li{
+    	/*border:1px solid red;*/
+    	width:400px;
+    }
+    .ans{
+    	display: none;
+    	width:850px;
+    	margin:0 auto;
+    	color:purple;
+    }
+    .que{
+    	cursor: pointer;
+    }
+    em{
+    	color:purple;
+    }
+    </style>
+</head>
+<body>
+	<div class="main">
+		<input type="button" value="点击模式">
+		<input type="button" value="移动模式">
+		<p>jquery部分</p>
+		<ol>
+			<li>
+				<p class="que">p在有些情况下会折行，有些不会</p>
+				<p class="ans">word-break:break-all;&nbsp;&nbsp;word-wrap:break-word;</p>
+			</li>
+			<li>
+				<p class="que">em，rem,vw的区别和意义</p>
+				<p class="ans">所有的浏览器默认的字体大小都是16px,<br/>
+				也就是说，当你没有声明的时候，1rem等于16px,<br/>
+				声明html{font-size:10px}后，1rem=10px
+				</p>
+			</li>
+			<li>
+				<p class="que">点击事件不放在$(document).ready(function(){</p>
+				<p class="ans">会不可用</p>
+			</li>
+			<li>
+				<p class="que">给一个浮动的框加定位子元素</p>
+				<p class="ans">浮动部局和inline-block均可以</p>
+			</li>
+			<li>
+				<p class="que">图片居中的样式，加在需要居中的图片上</p>
+				<p class="ans">margin:auto;<br/>
+				    position: absolute;<br/>
+				    top:0;<br/>
+				    left:0;<br/>
+				    right:0;<br/>
+				    bottom:0;
+				</p>
+			</li>			
+			<li>
+				<p class="que">display:inline-block;要注意的问题</p>
+				<p class="ans">对齐和font-size:0;</p>
+			</li>				
+			<li>
+				<p class="que">图片居中，</p>
+				<p class="ans">属性设为left:50%,margin-left为半个图片大小</p>
+			</li>				
+			<li>
+				<p class="que">document.getElementById("foo").innerHTML;</p>
+				<p class="ans">$("#foo").html();</p>
+			</li>				
+			<li>
+				<p class="que">document.getElementById("tt").style.color="red";</p>
+				<p class="ans">$("#tt").css("color","red");</p>
+			</li>				
+			<li>
+				<p class="que">jq判断元素是否可见</p>
+				<p class="ans">$(this).next("p").is(":hidden")<br/>$(this).next("p").is(":visible")</p>
+			</li>			
+		</ol>
+		<p>能力掌据部分</p>
+		<em>要学的东西要反反复复的练习</em>
+		<ul>
+			<li>
+				<p class="que">点击后的显示和隐藏</p>
+				<p class="ans">
+					if($(this).next().is(":visible")){<br/>
+					$(this).next().hide();
+				}</p>
+				<p class="que">toggle同hover,能有效减少代码量</p>
+				<p class="ans">
+					$("#panel h5.head").toggle(function(){<br/>
+						$(this).next().toggle();<br/>
+					},function(){<br/>
+						$(this).next().toggle();<br/>
+					})
+				}</p>
+				<p class="que">css3动画animation</p>
+				<p class="ans">
+					#panel{               <br/>
+						width:100px;<br/>
+						height:100px;<br/>
+						background: orange;<br/>
+						/*animation: myfirst 1s;*/<br/>
+					}<br/>
+					#panel:active{<br/>
+						animation: myfirst 1s;<br/>
+					}<br/>
+					@keyframes myfirst{<br/>
+						0% {background: red;margin-top: 0px;}<br/>
+						25% {background: yellow;margin-top: 25px;}<br/>
+						50% {background: blue;margin-top: 25px;}<br/>
+						100% {background: red;margin-top: 0px;}<br/>
+					}
+				</p>
+				<p class="que">同类多个元素选择</p>
+				<p class="ans">
+					样式：div.main>div:nth-child(odd){<br/>
+					jq: eq(odd);<br/>
+				</p>
+				<p class="que">冒泡事件</p>
+				<p class="ans">
+					e.stopPropagation();
+				</p>
+				<p class="que">阻止默认行为</p>
+				<p class="ans">
+					e.preventDefault();
+				</p>
+				<p class="que">事件类型</p>
+				<p class="ans">
+					指的是click,mouseout之类，用e.type获得。
+				</p>
+				<p class="que">获取位置</p>
+				<p class="ans">
+					$("a").click(function(e){<br/>
+						alert(e.pageX+"////"+e.pageY);<br/>
+						e.preventDefault();
+					})
+				</p>
+				<p class="que">解除绑定事件</p>
+				<p class="ans">
+					$("a").click(function(e){<br/>
+						alert(e.pageX+"////"+e.pageY);<br/>
+						e.preventDefault();
+					})
+				</p>
+				<p class="que">触发自定义事件</p>
+				<p class="ans">
+					$("#btn").trigger("click");
+				</p>
+				<p class="que">给事件添加命名空间，</p>
+				<p class="ans">
+					$("#btn").bind("click.plugin",function(){<br/>
+
+					})<br/>
+					$("#btn").click(function(){<br/>
+						$("#btn").unbind(".plugin");<br/>
+					})
+				</p>
+				<p class="que">hide,show fadeIn,fadeOut的异同 slideUp,slideDown</p>
+				<p class="ans">
+					show是改变高度宽度和不透明度<br/>
+					fadeIn只改变透明度<br/>
+					slideUp只改变高度 <br/>
+				</p>
+				<p class="que">jq动画</p>
+				<p class="ans">
+					$("#content").click(function(){<br/>
+						$(this).animate({left:"500px"},3000);<br/>
+					})<br/>
+				</p>
+				<p class="que">jq累加动画</p>
+				<p class="ans">
+					$("#content").click(function(){<br/>
+						$(this).animate({left:"100px"，height:"100px",opacity:"1"},3000).animate({top:"100px",width:"300px"},4000);<br/>
+					})<br/>
+				</p>
+				<p class="que">jq累加动画2-有两个top时top定义的是最终状态，也就是说top的值以最后一个为准，定义的也是末状态</p>
+				<p class="ans">
+					$("#content").click(function(){<br/>
+						$(this).animate({top:"100px"},4000).<br/>animate({left:"100px",top:"200px"},3000).<br/>css("border","5px solid blue");<br/>
+					})
+				</p>
+				<p class="que">动画中的stop()方法</p>
+				<p class="ans">
+					立即停止当前动画，并以当前状态开始接下来的动画 <br/>
+					$(this).stop().animate({height:"150",width:"300"},200)
+				</p>
+				<p class="que">delay()动画延迟执行</p>
+				<p class="ans">
+						$(this).stop(true,true).<br/>animate({height:"150"},200).delay(1000)<br/>
+				.animate({width:"300"},300);<br/>
+				</p>
+			</li>
+		</ul>
+		<p>js部分</p>
+		<ol>
+			<li>
+				<p class="que">typeof</p>
+				<p class="ans">用于获取类型</p>
+			</li>
+			<li>
+				<p class="que">动态创建标记</p>
+				<p class="ans">js用的是innerHTML，jq用的是html<br/>
+				两步：1.创建标记 2.插入标记
+				</p>
+			</li>
+		</ol>
+	</div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+</html>
