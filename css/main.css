@@ -28,6 +28,16 @@ a {
   zoom: 1;
 }
 /*reset完成*/
+.btn{
+    width: 60px;
+  height: 15px;
+  display: block;
+  background: #3e4c64;
+  font-size: 12px;
+  LINE-HEIGHT: 15PX;
+  margin-top: 13px;
+  color: #fff;
+}
 body{
   background: #eff1f0;
 }
@@ -49,7 +59,7 @@ img{
   background:#eff1f0;
   color:#fff;
   position: relative;
-      padding: 0 50px;
+  padding: 0 45px;
 }
 .header .bg1{
   width:64px;
@@ -96,7 +106,7 @@ img{
 .part-one{  
   width:100%;
   height:340px;
-  padding: 24px 50px;
+  padding: 24px 45px;
   position: relative;
   background: #2a3344;;
   margin-top: 5px;
@@ -192,11 +202,11 @@ img{
   right: 0 ;
   bottom: 0 ;
 }
-
+/* 部分三 */
 .part-three{
   height:350px;
   width:100%;
-  padding:45px 50px;
+  padding:45px;
 
   /*background: orange;*/
 }
@@ -228,12 +238,174 @@ img{
   overflow: hidden;
 }
 .part-three>.content>.list>p{
-    width: 60px;
-    height: 15px;
-    display: block;
-    background: #3e4c64;
-    font-size: 12px;
-    LINE-HEIGHT: 15PX;
-    margin-top: 13px;
-    color: #fff;
+
+}
+/*部分四*/
+.part-four{
+  width:100%;
+  height:200px;
+  /*background: red;*/
+  padding: 0 27px;
+}
+.part-four .content{
+  width:100%;
+  height:100%;
+  /*background: orange;*/
+  font-size: 0;
+  vertical-align: top;
+}
+.part-four .content div{
+  width:50%;
+  display: inline-block;
+  height: 100%;
+  padding: 0 18px;
+}
+.part-four .content div h1{
+  border-bottom: 1px solid red;
+  height: 40px;
+  margin-top: 24px;
+  font-size: 20px;
+  line-height: 40px;
+}
+.part-four .content div p{
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 13px;
+}
+.part-four .content div p.btn{
+  line-height: 15px;
+}
+.part-four .content div.left{
+  /*background: blue;*/
+  font-size: 24px; 
+}
+/*部分5*/
+.part-five{
+  height:235px;
+  width:100%;
+  padding:0 30px;
+  /*background: red;*/
+}
+.part-five .content{
+  width:100%;
+  height:70%;
+  /*background: orange;*/
+  font-size: 0;
+}
+.part-five .content>div{
+  width:16.66%;
+  height:100%;
+  display: inline-block;
+  /*background: blue;*/
+  vertical-align: top;
+  padding: 0 15px;
+}
+.part-five{
+  line-height: 65px;
+}
+.part-five .content .box2{
+  position:relative;
+}
+.part-five .content .box2 h1{
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    line-height: 35px;
+}
+.part-five .content .box2 .imgBox{
+      width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.part-six{  
+  width:100%;
+  height:300px;
+  padding: 24px 45px;
+  position: relative;
+  background: #2a3344;;
+  margin-top: 5px;
+  font-size: 0;
+}
+.part-six .container{
+  width: 100%;
+    height: 310px;
+    font-size: 0;
+    position: absolute;
+    top: -5px;
+    z-index: -5;
+}
+.part-six .container>div{
+   height:100%;
+   display: inline-block;
+}
+.part-six .container .left{
+  width:720px;
+  margin-right: 5px;
+  background: #ca5f3f;
+}
+.part-six .container .right{
+  width:175px;
+  background: #2ab3bd;
+}
+.part-six .box{
+  width:100%;
+  height:100%;
+
+}
+.part-six .box .display{
+  width:25%;
+  height:100%;
+  /*background: orange;*/
+  display: inline-block;
+  vertical-align: top;
+
+}
+.part-six .box .display h1{
+  font-size: 18px;
+  height:35px;
+  line-height: 35px;
+  color:#fff;
+}
+.part-six .box .display:first-child ul{
+  font-size: 16px;
+}
+.part-six .box .display:first-child ul li{
+  list-style: none;
+  padding: 12px 25px;
+  line-height: 20px;
+  border-bottom: 2px solid #252e3f;
+  color:#fff;
+  position: relative;
+}
+.part-six .box .display:first-child ul li i{
+      width: 8px;
+    height: 20px;
+    display: inline-block;
+    background: #1b5b60;
+    position: absolute;
+    left: 0;
+}
+.part-six .box .display:nth-child(2){
+  padding-left: 35px;
+}
+.part-six .box .display:nth-child(2)>div{
+  width:85px;
+  height: 85px;
+  display: inline-block;
+  background: red;
+}
+.part-six .box .display:nth-child(2)>div:nth-child(4){
+  /*margin-bottom: 15px;*/
+  margin-right: 15px;
+}
+.part-six .box .display:nth-child(2)>div:nth-child(2){
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.part-six .box .display:nth-child(2)>div:nth-child(3){
+  margin-left: 15px;
+  margin-bottom: 15px;
 }
