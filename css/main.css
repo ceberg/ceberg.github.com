@@ -413,4 +413,8 @@ img{
   font-size: 18px;
     color: #fff;
 }
-    
+.part-two h1{
+      line-height: 20px;
+    margin-top: 20px;
+    color: #aaa;
+} 
