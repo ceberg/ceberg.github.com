@@ -51,7 +51,7 @@ img{
 .header h1{
       line-height: 50px;
     font-size: 50px;
-    color: #3a3e44;
+    color: green;
 }
 .header{
   width:100%;
@@ -259,18 +259,19 @@ img{
   display: inline-block;
   height: 100%;
   padding: 0 18px;
+  vertical-align: top;
 }
 .part-four .content div h1{
   border-bottom: 1px solid red;
   height: 40px;
   margin-top: 24px;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 40px;
 }
 .part-four .content div p{
-  font-size: 12px;
-  line-height: 18px;
-  margin-top: 13px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 13px;
 }
 .part-four .content div p.btn{
   line-height: 15px;
