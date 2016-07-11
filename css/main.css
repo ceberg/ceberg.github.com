@@ -76,7 +76,7 @@ img{
     height: 100px;
     border-radius: 50px;
     top: 20px;
-    left: 270px;
+    left: 100px;
     overflow: hidden;
     z-index: 0;
 }
@@ -419,3 +419,11 @@ img{
     margin-top: 20px;
     color: #aaa;
 } 
+    .navi{
+      float: right;
+      position: relative;
+      bottom: 45px;
+      font-size: 28px;
+      color: gray;
+      margin-top:50px;
+    }
